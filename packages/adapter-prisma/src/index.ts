@@ -29,7 +29,7 @@ export function PrismaAdapter(
   const p = prisma as PrismaClient
   return {
     // We need to let Prisma generate the ID because our default UUID is incompatible with MongoDB
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
     createUser: ({ id, ...data }) => {
       return p.user.create({ data })
     },
